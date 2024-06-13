@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter 1st number: ");
+        int a = sc.nextInt();
+        System.out.print("Enter 2nd number: ");
+        int b = sc.nextInt();
+        int rem=0,res=0,i=0;
+        int[] A = new int[100];
+        while(a!=0 || b!=0){
+          res = (a%10 + b%10 + rem)%2;
+          rem = (a%10 + b%10 + rem)/2;
+          A[i++]=res;
+          a = a/10;
+          b = b/10;
+        }
+        if(rem!=0){
+          A[i++]=rem;
+        }
+        for(int j=i-1;j>=0;j--) 
+          System.out.print(A[j]);
+    }
+}
