@@ -1,0 +1,18 @@
+public class Main
+{
+    public static int vowelCount(String s){
+        String str = "aeiou";
+        int n = s.length();
+        int c=0;
+        for(int i=0;i<n;i++){
+            char ch = s.charAt(i);
+            if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u')
+                c++;
+		}
+		return c;
+    }
+	public static void main(String[] args) {
+		String s= "Aayush";
+		System.out.println(vowelCount(s));
+	}
+}
