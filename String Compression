@@ -1,0 +1,24 @@
+public class Main
+{
+	public static void main(String[] args) {
+		String s= "aaabbcccdd";
+		StringBuilder sb = new StringBuilder("");
+		Integer x=1;
+		sb.append(s.charAt(0));
+		for(int i=1;i<s.length();i++){
+		    if(s.charAt(i)==s.charAt(i-1))
+		        x++;
+		    else{
+		        if(x>1){
+		            sb.append(x);
+		            x=1;
+		        }
+		        sb.append(s.charAt(i));
+		    }
+		}
+		if(x>1){
+		    sb.append(x);
+		}
+		System.out.println(sb);
+	}
+}
