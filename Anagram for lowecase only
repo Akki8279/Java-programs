@@ -1,3 +1,4 @@
+//or we can convert it into charArray and sort and then compare
 public class Main
 {
     public static boolean anagram(String s1,String s2){
